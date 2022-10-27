@@ -1,12 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using StudentApp.Core;
 
 namespace StudentApp.Data
 {
-    public class StudentAppDBContext :DbContext
+    public class StudentAppDbContext :DbContext
     {
-        public StudentAppDBContext(DbContextOptions<StudentAppDBContext>options): base(options)
+        public StudentAppDbContext(DbContextOptions<StudentAppDbContext> option): base(option)
         {
 
         }   
+
+        public DbSet<StudentDetail> StudentDetails { get; set; }
+
     }
 }

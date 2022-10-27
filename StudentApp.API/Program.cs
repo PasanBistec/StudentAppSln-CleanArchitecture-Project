@@ -1,3 +1,4 @@
+
 using Microsoft.EntityFrameworkCore;
 using StudentApp.Data;
 
@@ -5,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddDbContext<StudentAppDBContext>(option =>
+builder.Services.AddDbContext<StudentAppDbContext>(option =>
 {
     option.UseInMemoryDatabase(databaseName: "Test");
 });
